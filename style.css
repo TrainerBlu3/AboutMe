@@ -14,23 +14,23 @@
   --main-color: #ea580e;
 }
 
-html{
+html {
   font-size: 50%;
   overflow-x: hidden;
 }
 
-body{
+body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
-.header{
+.header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   padding: 4rem 15%;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -38,13 +38,13 @@ body{
   z-index: 9999;
 }
 
-#menu-icon{
+#menu-icon {
   font-size: 3.5rem;
   color: var(--main-color);
   display: none;
 }
 
-.logo{
+.logo {
   font-size: 3rem;
   color: var(--text-color);
   font-weight: 800;
@@ -52,21 +52,19 @@ body{
   transition: 0.3 ease-in-out;
 }
 
-.logo:hover{
+.logo:hover {
   transform: scale(1.1);
 }
 
-span{
-  background: linear-gradient(
-    270deg,
-    #DF8908 10%,
-    #ff1d15 100%
-  );
+span {
+  background: linear-gradient(270deg,
+      #DF8908 10%,
+      #ff1d15 100%);
   background-clip: text;
   color: transparent;
 }
 
-.navbar a{
+.navbar a {
   font-size: 1.8rem;
   color: var(--text-color);
   margin-left: 4rem;
@@ -75,28 +73,26 @@ span{
   border-bottom: 3px solid transparent;
 }
 
-.navbar a:hover{
+.navbar a:hover {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
 
-.gradientBtn{
+.gradientBtn {
   font-size: 1.8rem;
   padding: 1rem, 2rem;
   border-radius: 3rem;
-  background: linear-gradient(
-    270deg,
-    #DF8908 10%,
-    #ff1d15 100%
-  );
+  background: linear-gradient(270deg,
+      #DF8908 10%,
+      #ff1d15 100%);
   letter-spacing: 1px;
-  cursor:pointer;
+  cursor: pointer;
   transition: 0.3 ease-in-out;
   color: white;
   border: none;
   text-wrap: nowrap;
 }
 
-.gradientBtn:hover{
+.gradientBtn:hover {
   transform: scale(1.1);
 }
