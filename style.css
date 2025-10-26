@@ -19,7 +19,15 @@ html {
   overflow-x: hidden;
 }
 
+h1{
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-size: 42px;;
+}
+
 body {
+  padding-top: 100px; /*this is so that the navbar doesnt cover content*/
   background-color: var(--bg-color);
   color: var(--text-color);
 }
