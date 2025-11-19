@@ -1,3 +1,4 @@
+/* Global Reset & Variables */
 * {
   margin: 0;
   padding: 0;
@@ -24,18 +25,20 @@ body {
   color: var(--text-color);
 }
 
+/* Header Styles */
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   padding: 4rem 15%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 9999;
+  border-bottom: 1px solid rgba(234, 88, 14, 0.2);
 }
 
 #menu-icon {
@@ -97,11 +100,13 @@ span {
   transform: scale(1.1);
 }
 
+/* Section Layout */
 section {
   min-height: 100vh;
   padding: 10rem 15%;
 }
 
+/* Home Section */
 .home {
   display: flex;
   align-items: center;
@@ -147,6 +152,7 @@ section {
     0 0 100px var(--main-color);
 }
 
+/* Social Icons */
 .social-icons a {
   display: inline-flex;
   justify-content: center;
@@ -168,6 +174,7 @@ section {
   box-shadow: 0 0 25px var(--main-color);
 }
 
+/* Button Styles */
 .btn-group {
   display: flex;
   gap: 1.5rem;
@@ -212,7 +219,7 @@ section {
   cursor: pointer;
 }
 
-
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
 
   #menu-icon {
@@ -221,28 +228,33 @@ section {
   }
 
   .navbar {
-    position: absolute;
-    top: 100%;
-    right: 0;
+    position: fixed;
+    top: 12rem;
+    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding: 2rem 0;
-
-    transform: translateY(-250%);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
-    pointer-events: none;
-    transition: 0.3s ease-in-out;
+    z-index: 999;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
 
   .navbar.active {
-    transform: translateY(0);
+    max-height: 400px;
+    padding: 2rem 0;
     opacity: 1;
-    pointer-events: auto;
+  }
+
+  .navbar a {
+    margin-left: 0;
+    font-size: 2rem;
   }
 
   .header .gradientBtn {

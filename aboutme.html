@@ -1,19 +1,168 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="aboutme.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
   <body>
-    <h1>My Story</h1>
-    <p>
-      I was born on the year 2003 in the Phillipines. My parents were OFW's (Overseas Filipino Workers), which meant that we moved to another continent before I was 5 years old.
-      At the age of 3 we immgrated to Africa where I spent majority of my formative years as well as my childhood and teen years. We moved to Eswathini (then called Swaziland) and when I was 5 years old,
-      we moved to South Africa, its next door neighbor. It was there where I discovered my love for computer science and coding. We stayed there for 8 or so years and then moved to Namibia where I finished 
-      most of my highschool career. In 2020, we moved to Canada and it was here where my love for computer science fully bloomed. I wasnt so interested in making new programs, more so in the manner which data is stored
-      and how such large quantities of data can be stored in the smallest of devices with efficient ways to retrieve data using code. This led me to pursue a Computer Science course at Okanagan College where 
-      I am currently a student.
-    </p>
+    <!-- Header Navigation -->
+    <header class="header">
+      <a href="index.html" class="logo">
+        Matthew <span>Tindogan</span>
+      </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+
+      <button class="gradientBtn">Contact Me</button>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="about">
+      <h2 class="heading">My <span>Story</span></h2>
+      
+      <!-- Journey Map -->
+      <div class="map-container">
+        <h3>My Journey Across <span>Continents</span></h3>
+        
+        <!-- Interactive Google Map -->
+        <div class="google-map">
+          <iframe 
+            id="mapFrame"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52901989.29508351!2d14.40234375!3d14.677094799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1234567890!5m2!1sen!2sca" 
+            width="100%" 
+            height="480"
+            style="border:0; border-radius: 1.5rem;" 
+            allowfullscreen="" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <p class="map-caption">📍 Click a location card to explore on the map</p>
+        </div>
+
+        <div class="locations-grid">
+          <div class="location-card" data-country="philippines" onclick="updateMap('philippines')">
+            <div class="location-icon">🇵🇭</div>
+            <h4>Philippines</h4>
+            <p class="year">2003</p>
+            <p>Where it all began</p>
+          </div>
+          
+          <div class="location-card" data-country="eswatini" onclick="updateMap('eswatini')">
+            <div class="location-icon">🇸🇿</div>
+            <h4>Eswatini</h4>
+            <p class="year">2003 - 2008</p>
+            <p>Early childhood</p>
+          </div>
+          
+          <div class="location-card" data-country="south-africa" onclick="updateMap('south-africa')">
+            <div class="location-icon">🇿🇦</div>
+            <h4>South Africa</h4>
+            <p class="year">2008 - 2016</p>
+            <p>Discovered coding</p>
+          </div>
+          
+          <div class="location-card" data-country="namibia" onclick="updateMap('namibia')">
+            <div class="location-icon">🇳🇦</div>
+            <h4>Namibia</h4>
+            <p class="year">2016 - 2020</p>
+            <p>High school years</p>
+          </div>
+          
+          <div class="location-card active" data-country="canada" onclick="updateMap('canada')">
+            <div class="location-icon">🇨🇦</div>
+            <h4>Canada</h4>
+            <p class="year">2020 - Present</p>
+            <p>Computer Science studies</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>2003 - The Beginning</h3>
+            <p>Born in the Philippines to parents who were OFW's. Before I turned 5, we embarked on a journey across continents.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>2003-2008 - Africa Calling</h3>
+            <p>At age 3, we immigrated to Africa, beginning in Eswatini. By age 5, we moved to South Africa, discovering new cultures and technology.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>2008-2016 - Discovery</h3>
+            <p>South Africa became where I discovered my love for computer science and coding. For 8 years, I learned how computers work.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>2016-2020 - Namibia Years</h3>
+            <p>We moved to Namibia where I completed most of my high school career and solidified my technical skills.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>2020-Present - Canada</h3>
+            <p>In 2020, we moved to Canada. I'm now pursuing Computer Science at Okanagan College, fascinated by data structures and algorithms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      // Interactive map location changer
+      function updateMap(country) {
+        const mapFrame = document.getElementById('mapFrame');
+        const mapUrls = {
+          'philippines': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16309856.085978478!2d113.89599999999999!3d12.879721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x324053215f87de63%3A0x784790ef7a29da57!2sPhilippines!5e0!3m2!1sen!2sca!4v1234567890!5m2!1sen!2sca',
+          'eswatini': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d920640.4784384274!2d30.7944!3d-26.5225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee8ddb2c1004911%3A0x3c81391f5099660!2sEswatini!5e0!3m2!1sen!2sca!4v1234567890!5m2!1sen!2sca',
+          'south-africa': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14682949.369313026!2d15.499999999999998!3d-30.559483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e0!3m2!1sen!2sca!4v1234567890!5m2!1sen!2sca',
+          'namibia': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7683685.715454595!2d12.3345!3d-22.9576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b07bfb60d21d3%3A0x47ba5c0e235b0be6!2sNamibia!5e0!3m2!1sen!2sca!4v1234567890!5m2!1sen!2sca',
+          'canada': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23825216.726435997!2d-106.346771!3d56.130366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0d03d337cc6ad9%3A0x9968b72aa2438fa5!2sCanada!5e0!3m2!1sen!2sca!4v1234567890!5m2!1sen!2sca'
+        };
+
+        // Update map src
+        if (mapUrls[country]) {
+          mapFrame.src = mapUrls[country];
+        }
+
+        // Update active state on cards
+        document.querySelectorAll('.location-card').forEach(card => {
+          card.classList.remove('active');
+        });
+        document.querySelector(`[data-country="${country}"]`).classList.add('active');
+
+        // Smooth scroll to map
+        document.querySelector('.google-map').scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+      }
+    </script>
   </body>
 </html>

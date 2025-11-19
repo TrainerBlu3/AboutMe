@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            Matthew <span>Tindogan</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact Me</a>
+        </nav>
+
+        <button class="gradientBtn">Contact Me</button>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+    </header>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <div class="contact-wrapper">
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form">
+                <div class="input-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" placeholder="Your name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" required>
+                        <option value="">Select subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="project">Project Collaboration</option>
+                        <option value="job">Job Opportunity</option>
+                    </select>
+                    <span class="error" id="subjectError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+                    <span class="error" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+                <div id="formMessage"></div>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class='bx bx-envelope'></i>
+                    <p>matthew.tindogan@example.com</p>
+                </div>
+                <div class="info-item">
+                    <i class='bx bx-map'></i>
+                    <p>Kelowna, BC</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com" target="_blank">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank">
+                        <i class="bx bxl-linkedin-square"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>
