@@ -15,17 +15,17 @@ body {
     margin: 0 auto;
 }
 
-h1{
+h1 {
     font-size: 5vw;
     margin: 30px 3px;
 }
 
-.project h2{
+.project h2 {
     font-size: 3vw;
     grid-column: 1;
 }
 
-.project p{
+.project p {
     font-size: 2rem;
     grid-column: 1;
 }
@@ -34,25 +34,40 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: var(--second-bg-color);
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(234, 88, 14, 0.2);
 }
 
-.project1, .project2, .project3 {
+.project-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(234, 88, 14, 0.4);
+}
+
+.project1,
+.project2,
+.project3 {
     display: grid;
     position: relative;
     width: 100%;
     margin: 100px 50px;
     grid-template-columns: 1fr 1fr;
-   
 }
 
 .project-preview {
-    position: relative;
+    position: absolute;
+    left: 45vw;
+    z-index: 5;
+    width: 25vw;
 }
 
 .project-image {
     display: none;
     grid-column: 2;
-
+    width: 100%;
 }
 
 .tech-used {
