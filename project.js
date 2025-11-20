@@ -1,4 +1,5 @@
-$(document).ready(() =>{
+$(document).ready(() => {
+
     $('.project1').mouseenter(() => {
         $('#proj-img1').fadeIn(200);
     });
@@ -23,4 +24,32 @@ $(document).ready(() =>{
     $('.project3').mouseleave(() => {
         $('#proj-img3').fadeOut(200);
     });
+
+    $('#proj-img1').mouseenter(() => {
+        $('#proj-img1').css('width', '35vw');
+    });
+
+    $('#proj-img1').mouseleave(() => {
+        $('#proj-img1').css('width', '25vw');
+    });
+
+    let typed = new Typed('.project1 .project-content h2 span', {
+        strings: ['Minesweeper'], //put data thing for json
+        typeSpeed: 50,
+        backSpeed: 0,
+        loop: false,
+        showCursor: false,
+    });
+
+    let typed2 = new Typed('.project2 .project-content h2 span', {
+        strings: ['Here'],
+        typeSpeed: 50,
+        backSpeed: 0,
+        loop: false,
+        showCursor: false,
+    });
 });
+
+
+
+
