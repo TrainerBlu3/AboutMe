@@ -1,25 +1,51 @@
 <style>
     footer {
-        background-color: #171717;
+        background-color: #101010;
         padding: 1%;
-        /* align-items: center; */
+    }
+
+    .footer-content{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
     }
 
     p {
+        position: relative;
         text-align: center;
         font-size: 1.5rem;
         font-family: Arial, Helvetica, sans-serif
     }
-    i{
+
+    .icons i {
         position: relative;
+        display: inline-flex;
+        justify-content: center;
         align-items: center;
+        color: white;
+        margin: 2rem 0.5rem;
+        font-size: 2rem;
     }
+    
 </style>
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <footer>
-    <p>Copyright © 2025</p>
-    <div class="icons">
-      <!-- <i class="bx bxl-github"></i> -->
+    <div class="footer-content">
+        <p>Copyright © Matthew Tindogan 2025</p>
+        <div class="icons">
+            <a href="https://github.com" target="_blank">
+                <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="bx bxl-linkedin-square"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <i class="bx bxl-twitter"></i>
+            </a>
+        </div>
     </div>
+
 </footer>
