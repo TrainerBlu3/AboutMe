@@ -219,6 +219,7 @@ section {
   cursor: pointer;
 }
 
+/* Hire Transistion */
  .transition-overlay {
     position: fixed;
     top: 0;

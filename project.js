@@ -31,7 +31,7 @@ $(document).ready(() => {
 
     $('#proj-img1').mouseleave(() => {
         $('#proj-img1').css('width', '25vw');
-    });
+    }); 
 
 
     let typed = new Typed('.project1 .project-content h2 span', {
@@ -52,7 +52,3 @@ $(document).ready(() => {
 
     $('.project-content p').slideDown(900);
 });
-
-
-
-
