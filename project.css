@@ -5,7 +5,7 @@
 body {
     position: relative;
     top: 100px;
-    padding: 60px 40px;
+    /* padding: 60px 40px; */
     background-color: var(--bg-color);
     color: var(--text-color);
 }
@@ -16,8 +16,10 @@ body {
 }
 
 h1 {
+    position: relative;
+    text-align: center;
     font-size: 5vw;
-    margin: 30px 3px;
+    margin: 60px;
 }
 
 .project h2 {
@@ -26,6 +28,7 @@ h1 {
 }
 
 .project p {
+    display: none;
     font-size: 2rem;
     grid-column: 1;
 }

@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    $('.project1').mouseenter(() => {
+    $('.project1 .project-content').mouseenter(() => {
         $('#proj-img1').fadeIn(200);
     });
 
@@ -9,19 +9,19 @@ $(document).ready(() => {
     });
 
 
-    $('.project2').mouseenter(() => {
+    $('.project2 .project-content').mouseenter(() => {
         $('#proj-img2').fadeIn(200);
     });
 
-    $('.project2').mouseleave(() => {
+    $('.project2 .project-content').mouseleave(() => {
         $('#proj-img2').fadeOut(200);
     });
 
-    $('.project3').mouseenter(() => {
+    $('.project3 .project-content').mouseenter(() => {
         $('#proj-img3').fadeIn(200);
     });
 
-    $('.project3').mouseleave(() => {
+    $('.project3 .project-content').mouseleave(() => {
         $('#proj-img3').fadeOut(200);
     });
 
@@ -32,6 +32,7 @@ $(document).ready(() => {
     $('#proj-img1').mouseleave(() => {
         $('#proj-img1').css('width', '25vw');
     });
+
 
     let typed = new Typed('.project1 .project-content h2 span', {
         strings: ['Minesweeper'], //put data thing for json
@@ -48,6 +49,8 @@ $(document).ready(() => {
         loop: false,
         showCursor: false,
     });
+
+    $('.project-content p').slideDown(900);
 });
 
 
