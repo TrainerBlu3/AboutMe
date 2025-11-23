@@ -8,10 +8,9 @@
             "Javascript",
             "HTML",
             "CSS",
-            "MySQL",
-            "Linux"
+            "MySQL"
         ],
-        "image": "exampleProjPicture.png"
+        "image": "Recording 2025-11-22 193217.gif"
     },
     {
         "titleFirstHalf": "JavaFX ",
@@ -30,9 +29,10 @@
         "tech": [
             "AJAX",
             "JQuery",
+            "Javascript",
             "HTML",
             "CSS"
         ],
-        "image": "exampleProjPicture.png"
+        "image": "this.gif"
     }
 ]

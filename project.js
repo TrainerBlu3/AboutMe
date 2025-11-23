@@ -1,54 +1,76 @@
-$(document).ready(() => {
 
-    $('.project1 .project-content').mouseenter(() => {
-        $('#proj-img1').fadeIn(200);
-    });
+const url = 'projects.json';
+async function fetchProjects() {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
 
-    $('.project1').mouseleave(() => {
-        $('#proj-img1').fadeOut(200);
-    });
+        const projects = await response.json();
+        const projectsClass = document.querySelector('.projects');
+        projectsClass.innerHTML = '';
 
-
-    $('.project2 .project-content').mouseenter(() => {
-        $('#proj-img2').fadeIn(200);
-    });
-
-    $('.project2 .project-content').mouseleave(() => {
-        $('#proj-img2').fadeOut(200);
-    });
-
-    $('.project3 .project-content').mouseenter(() => {
-        $('#proj-img3').fadeIn(200);
-    });
-
-    $('.project3 .project-content').mouseleave(() => {
-        $('#proj-img3').fadeOut(200);
-    });
-
-    $('#proj-img1').mouseenter(() => {
-        $('#proj-img1').css('width', '35vw');
-    });
-
-    $('#proj-img1').mouseleave(() => {
-        $('#proj-img1').css('width', '25vw');
-    }); 
+        projects.forEach((project, index) => {
+            const projectHTML = `
+        <div class="project">
+          <div class="project${index + 1}">
+            <div class="project-content">
+              <h2>${project.titleFirstHalf}<span></span></h2>
+              <p>${project.p}</p> 
+              <div class="tech-used">
+                ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+              </div>
+            </div>
+            <div class="project-preview">
+              <img class="project-image" id="proj-img${index + 1}" src="${project.image}" alt="${project.titleFirstHalf} ${project.titleSecondHalf}">
+            </div>
+          </div>
+        </div>
+      `;
+            projectsClass.innerHTML += projectHTML;
+        });
 
 
-    let typed = new Typed('.project1 .project-content h2 span', {
-        strings: ['Minesweeper'], //put data thing for json
-        typeSpeed: 50,
-        backSpeed: 0,
-        loop: false,
-        showCursor: false,
-    });
+        $('.project-content p').slideDown(900);
 
-    let typed2 = new Typed('.project2 .project-content h2 span', {
-        strings: ['Here'],
-        typeSpeed: 50,
-        backSpeed: 0,
-        loop: false,
-        showCursor: false,
-    });
+        projects.forEach((project, index) => {
+            const projectNumber = index + 1;
+            const selector = `.project${projectNumber}`;
+            const imgId = `#proj-img${projectNumber}`;
 
-    $('.project-content p').slideDown(900);
-});
+          
+            $(selector + ' .project-content').mouseenter(() => {
+                $(imgId).fadeIn(200);
+            });
+
+            $(selector).mouseleave(() => {
+                $(imgId).fadeOut(200);
+            });
+
+     
+            $(imgId).mouseenter(() => {
+                $(imgId).css('width', '35vw');
+            });
+
+            $(imgId).mouseleave(() => {
+                $(imgId).css('width', '25vw');
+            });
+
+            new Typed(`.project${projectNumber} .project-content h2 span`, {
+                strings: [project.titleSecondHalf],
+                typeSpeed: 50,
+                backSpeed: 0,
+                loop: false,
+                showCursor: false,
+            });
+        });
+
+
+    } catch (error) {
+        console.error('Error loading json file for projects:', error);
+    }
+}
+
+
+fetchProjects();
