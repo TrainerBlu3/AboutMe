@@ -13,7 +13,7 @@ async function fetchProjects() {
 
         projects.forEach((project, index) => {
             const projectHTML = `
-        <div class="project">
+        <article class="project">
           <div class="project${index + 1}">
             <div class="project-content">
               <h2>${project.titleFirstHalf}<span></span></h2>
@@ -26,7 +26,7 @@ async function fetchProjects() {
               <img class="project-image" id="proj-img${index + 1}" src="${project.image}" alt="${project.titleFirstHalf} ${project.titleSecondHalf}">
             </aside>
           </div>
-        </div>
+        </article>
       `;
             projectsClass.innerHTML += projectHTML;
         });
