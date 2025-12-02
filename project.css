@@ -9,6 +9,11 @@ body {
     color: var(--text-color);
 }
 
+p {
+ text-align: left !important;
+}
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;

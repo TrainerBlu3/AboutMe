@@ -22,9 +22,9 @@ async function fetchProjects() {
                 ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
               </div>
             </div>
-            <div class="project-preview">
+            <aside class="project-preview">
               <img class="project-image" id="proj-img${index + 1}" src="${project.image}" alt="${project.titleFirstHalf} ${project.titleSecondHalf}">
-            </div>
+            </aside>
           </div>
         </div>
       `;
