@@ -160,7 +160,7 @@
   box-shadow: 0 0 20px var(--main-color);
 }
 
-/* Mobile */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .contact {
     padding: 12rem 5% 8rem;

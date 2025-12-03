@@ -1,5 +1,5 @@
 function hireTransistion(url) {
-    // Create overlay
+    // Overlay div
     const overlay = $('<div class="transition-overlay">Good Choice</div>');
     $('body').append(overlay);
     

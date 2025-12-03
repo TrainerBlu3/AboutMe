@@ -1,20 +1,26 @@
 
-const url = 'projects.json';
+//Load projects from json file
+const file = 'projects.json';
 async function fetchProjects() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(file);
+
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
-
+        //Parse json file to js objects
         const projects = await response.json();
+
+        //Select project class where the projects are going to go
         const projectsClass = document.querySelector('.projects');
         projectsClass.innerHTML = '';
 
+        //Create HTML for each project from json data
         projects.forEach((project, index) => {
+            const projectNumber = index + 1;
             const projectHTML = `
         <article class="project">
-          <div class="project${index + 1}">
+          <div class="project${projectNumber}">
             <div class="project-content">
               <h2>${project.titleFirstHalf}<span></span></h2>
               <p>${project.p}</p> 
@@ -23,7 +29,7 @@ async function fetchProjects() {
               </div>
             </div>
             <aside class="project-preview">
-              <img class="project-image" id="proj-img${index + 1}" src="${project.image}" alt="${project.titleFirstHalf} ${project.titleSecondHalf}">
+              <img class="project-image" id="proj-img${projectNumber}" src="${project.image}" alt="${project.titleFirstHalf} ${project.titleSecondHalf}">
             </aside>
           </div>
         </article>
@@ -32,19 +38,19 @@ async function fetchProjects() {
         });
 
 
+        //JQuery code to add animation to projects
         $('.project-content p').slideDown(900);
 
         projects.forEach((project, index) => {
             const projectNumber = index + 1;
-            const selector = `.project${projectNumber}`;
+            const projectClassSelector = `.project${projectNumber}`;
             const imgId = `#proj-img${projectNumber}`;
-
           
-            $(selector + ' .project-content').mouseenter(() => {
+            $(projectClassSelector + ' .project-content').mouseenter(() => {
                 $(imgId).fadeIn(200);
             });
 
-            $(selector).mouseleave(() => {
+            $(projectClassSelector).mouseleave(() => {
                 $(imgId).fadeOut(200);
             });
 
@@ -55,7 +61,7 @@ async function fetchProjects() {
 
             $(imgId).mouseleave(() => {
                 $(imgId).css('width', '25vw');
-            });
+            });   
 
             new Typed(`.project${projectNumber} .project-content h2 span`, {
                 strings: [project.titleSecondHalf],
