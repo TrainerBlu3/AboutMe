@@ -1,4 +1,4 @@
-// Contact Form event listener
+// Contact Form Event Listener
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -52,7 +52,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     messageError.textContent = "";
   }
 
-  // Success
+  // If all input fields are valid: show success message and reset form
 
   if (isValid) {
     formMessage.textContent =
