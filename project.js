@@ -20,7 +20,7 @@ async function fetchProjects() {
             const projectNumber = index + 1;
             const projectHTML = `
         <article class="project">
-          <div class="project${projectNumber}">
+          <div class="project-num${projectNumber}">
             <div class="project-content">
               <h2>${project.titleFirstHalf}<span></span></h2>
               <p>${project.p}</p> 
@@ -43,7 +43,7 @@ async function fetchProjects() {
 
         projects.forEach((project, index) => {
             const projectNumber = index + 1;
-            const projectClassSelector = `.project${projectNumber}`;
+            const projectClassSelector = `.project-num${projectNumber}`;
             const imgId = `#proj-img${projectNumber}`;
           
             $(projectClassSelector + ' .project-content').mouseenter(() => {
@@ -63,7 +63,7 @@ async function fetchProjects() {
                 $(imgId).css('width', '25vw');
             });   
 
-            new Typed(`.project${projectNumber} .project-content h2 span`, {
+            new Typed(projectClassSelector + ' .project-content h2 span', {
                 strings: [project.titleSecondHalf],
                 typeSpeed: 50,
                 backSpeed: 0,
