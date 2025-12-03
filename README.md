@@ -14,9 +14,9 @@
 | Category | Details |
 |----------|---------|
 | **Design** | Design choices, color patterns, and overall theme of the site |
-| **Stylesheets** | index, aboutme, contact, style |
+| **Stylesheets** | index, aboutme, contact, main style sheet |
 | **HTML** | index, aboutme, contact |
-| **APIs** | Google API implementation |
+| **JavaScript and APIs** | Google API implementation, aboutme.js |
 
 ---
 
