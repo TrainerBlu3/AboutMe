@@ -10,7 +10,8 @@
             "CSS",
             "MySQL"
         ],
-        "image": "Recording 2025-11-22 193217.gif"
+        "image": "Recording 2025-11-22 193217.gif",
+        "link": "https://github.com/TrainerBlu3/AboutMe"
     },
     {
         "titleFirstHalf": "JavaFX ",
@@ -20,7 +21,8 @@
             "JavaFX",
             "Java"
         ],
-        "image": "https://c.tenor.com/O9ZzyS1D7V4AAAAd/tenor.gif"
+        "image": "https://c.tenor.com/O9ZzyS1D7V4AAAAd/tenor.gif",
+        "link": "https://github.com/TrainerBlu3"
     },
     {
         "titleFirstHalf": "This ",
@@ -33,6 +35,7 @@
             "HTML",
             "CSS"
         ],
-        "image": "this.gif"
+        "image": "this.gif",
+        "link": "https://github.com/TrainerBlu3"
     }
 ]

@@ -53,7 +53,6 @@ async function fetchProjects() {
             $(projectClassSelector).mouseleave(() => {
                 $(imgId).fadeOut(200);
             });
-
      
             $(imgId).mouseenter(() => {
                 $(imgId).css('width', '35vw');
@@ -63,6 +62,10 @@ async function fetchProjects() {
                 $(imgId).css('width', '25vw');
             });   
 
+            $(imgId).on('click', () => {
+                window.open(project.link);
+            });
+            
             new Typed(projectClassSelector + ' .project-content h2 span', {
                 strings: [project.titleSecondHalf],
                 typeSpeed: 50,
