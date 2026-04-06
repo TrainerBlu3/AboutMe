@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import About from './pages/About'
 
 function App() {
     return (
@@ -11,7 +12,7 @@ function App() {
                 <div className="flex-1">
                     <Routes>
                         <Route path="/" element={<Home/>}/>
-                        <Route path="/about" element={<div className="pt-20 p-8">About Page</div>}/>
+                        <Route path="/about" element={<About/>}/>
                         <Route path="/projects" element={<div className="pt-20 p-8">Projects Page</div>}/>
                         <Route path="/contact" element={<div className="pt-20 p-8">Contact</div>}/>
                     </Routes>
