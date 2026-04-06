@@ -1,0 +1,26 @@
+[
+  {
+    "title": "E-Commerce",
+    "titleHighlight": "Website",
+    "description": "A full-stack e-commerce platform with product management, shopping cart and MySQL database.",
+    "tech": ["PHP","Javascript","HTML","CSS","MySQL"],
+    "image": "/management.gif",
+    "link": "https://github.com/TrainerBlu3/AboutMe"
+  },
+  {
+    "title": "JavaFX ",
+    "titleHighlight": "Minesweeper",
+    "description": "A fully functional Minesweeper game built with JavaFX featuring multiple difficulty levels",
+    "tech": ["JavaFX","Java"],
+    "image": "https://c.tenor.com/O9ZzyS1D7V4AAAAd/tenor.gif",
+    "link": "https://github.com/TrainerBlu3"
+  },
+  {
+    "title": "Portfolio",
+    "titleHighlight": "Website",
+    "description": "This portfolio site, built for a college course using HTML, CSS, JavaScript and jQuery.",
+    "tech": ["AJAX","JQuery","Javascript","HTML","CSS"],
+    "image": "/this.gif",
+    "link": "https://github.com/TrainerBlu3"
+  }
+]
