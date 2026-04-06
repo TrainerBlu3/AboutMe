@@ -21,12 +21,12 @@ function Home() {
                     {/* Buttons */}
                     <div className="flex gap-4 flex-wrap mb-8">
                         <a
-                            href="/matthew-tindogan-cv.pdf"
+                            href="/matthew-tindogan-resume.pdf"
                             download
                             className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium
                         transition-colors"
                         >
-                            Download CV
+                            Download Resume
                         </a>
                         <Link
                             to="/contact"
