@@ -8,7 +8,7 @@ function Home() {
                 {/* Text Content */}
                 <div className="flex-1">
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                        Hi, I'm <span className="text-blue-500">Matthew Tindogan</span>
+                        Hi, I'm <span className="bg-gradient-to-l from-brand-gold to-red-500 bg-clip-text text-transparent">Matthew Tindogan</span>
                     </h1>
                     <h2 className="text-xl md:text-2xl text-gray-400 mb-6">
                         Web Developer & Computer Science Student
@@ -23,14 +23,14 @@ function Home() {
                         <a
                             href="/matthew-tindogan-resume.pdf"
                             download
-                            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium
+                            className="bg-brand hover:bg-brand-dark text-white px-6 py-3 rounded-lg font-medium
                         transition-colors"
                         >
                             Download Resume
                         </a>
                         <Link
                             to="/contact"
-                            className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                            className="border border-brand text-brand hover:bg-brand hover:text-white px-6 py-3 rounded-lg font-medium transition-colors"
                         >
                             Contact Me
                         </Link>
@@ -62,8 +62,7 @@ function Home() {
                     <img
                         src="/profile.png"
                         alt="Matthew Tindogan"
-                        className="w-64 h-64 rounded-full object-cover border-4 border-blue-500"
-                    />
+                        className="w-64 h-64 rounded-full object-cover border-4 border-brand shadow-[0_0_25px_#ea580e] hover:shadow-[0_0_50px_#ea580e] transition-shadow duration-300"                    />
                 </div>
             </div>
         </main>
