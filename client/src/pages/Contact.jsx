@@ -40,7 +40,7 @@ function Contact() {
             <div className="max-w-2xl mx-auto px-4 py-32">
 
                 <h1 className="text-4xl font-bold text-center mb-16">
-                    Contact <span className="text-blue-500">Me</span>
+                    Contact <span className="text-brand">Me</span>
                 </h1>
 
                 <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6" noValidate>
@@ -52,7 +52,7 @@ function Contact() {
                             name="name"
                             value={values.name}
                             onChange={handleChange}
-                            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500"
+                            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand"
                         />
                         {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
                     </div>
@@ -64,7 +64,7 @@ function Contact() {
                             name="email"
                             value={values.email}
                             onChange={handleChange}
-                            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500"
+                            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand"
                         />
                         {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
                     </div>
@@ -76,7 +76,7 @@ function Contact() {
                             name="subject"
                             value={values.subject}
                             onChange={handleChange}
-                            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500"
+                            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand"
                         />
                         {errors.subject && <p className="text-red-400 text-sm mt-1">{errors.subject}</p>}
                     </div>
@@ -89,7 +89,7 @@ function Contact() {
                             onChange={handleChange}
                             rows="5"
                             maxLength="450"
-                            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 resize-none"
+                            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand resize-none"
                         />
                         {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
                     </div>
@@ -97,7 +97,7 @@ function Contact() {
                     <button
                         type="submit"
                         disabled={status === 'sending'}
-                        className="bg-blue-500 hover:bg-blue-600 disabled:opacity-50 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                        className="bg-brand hover:bg-brand-dark disabled:opacity-50 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                     >
                         {status === 'sending' ? 'Sending...' : 'Send Message'}
                     </button>
